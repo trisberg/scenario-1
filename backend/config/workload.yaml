@@ -8,11 +8,12 @@ metadata:
     apps.tanzu.vmware.com/has-tests: "true"
     apis.apps.tanzu.vmware.com/register-api: "true"
     apps.tanzu.vmware.com/auto-configure-actuators: "true"
+    networking.knative.dev/visibility: cluster-local
 spec:
   build:
     env:
       - name: BP_JVM_VERSION
-        value: 17
+        value: "17"
   params:
     - name: annotations
       value:
