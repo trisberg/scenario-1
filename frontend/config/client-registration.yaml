@@ -4,14 +4,15 @@ metadata:
   name: customer-profile-ui-client-registration
 spec:
   authServerSelector:
-    matchLabels:
-      'name: authserver'
+    matchLabels: {
+      "name": "test-authserver"
+    }
   authorizationGrantTypes:
     - authorization_code
     - refresh_token
   clientAuthenticationMethod: basic
   requireUserConsent: false
   redirectURIs:
-    - "https://frontend.scenario1.35.192.91.18.nip.io/login/oauth2/code/customer-profile-ui"
+    - "http://customer-profile-ui.default.apps.35.192.91.18.nip.io/login/oauth2/code/customer-profile-ui"
   scopes:
     - name: openid
