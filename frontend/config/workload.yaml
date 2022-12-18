@@ -11,17 +11,17 @@ spec:
   build:
     env:
       - name: BP_JVM_VERSION
-        value: 17
+        value: "17"
   params:
     - name: annotations
       value:
         autoscaling.knative.dev/minScale: "1"
     - name: testing_pipeline_matching_labels
       value:
-        apps.tanzu.vmware.com/pipeline: test-java
+        apps.tanzu.vmware.com/pipeline: test
   env:
     - name: APP_SERVICE_HOST
-      value: http://customer-profile.<namespace>.<domain>
+      value: http://customer-profile.default.svc.cluster.local
   source:
     git:
       url: <https URL for your generated project's Git repository>
